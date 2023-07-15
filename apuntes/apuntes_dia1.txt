@@ -1,0 +1,36 @@
+1. -> antes de empezar descargar el kit de java la version LTS 
+comandos para ver la version de java:
+java -version
+javac -version
+
+Resumen
+Kotlin es similar a otros lenguajes de programación orientados a objetos.
+Instale el último JDK para su sistema operativo para usar Kotlin.
+Instale IntelliJ IDEA para trabajar con Kotlin.
+En IntelliJ IDEA, inicie el Kotlin REPL (Herramientas > Kotlin > Kotlin REPL) para practicar en un shell interactivo.
+Ingrese el código seguido de Control+Enter (Command+Enter en una Mac ) para ejecutarlo.
+Aquí está "Hello World" en Kotlin:
+
+
+ 2. Conceptos basicos de kotlin 
+ Kotlin admite dos tipos de variables: modificable ( mutable ) e inmutable ( ). Se especifican con var y val, respectivamente. Con val, puede asignar un valor una vez. Si intenta asignar algo nuevamente, obtiene un error. Con var, puede asignar un valor, luego cambiar el valor más adelante en el programa.
+ 
+los when la declaración es como la switch declaración en otros idiomas. Condiciones en un when la declaración también puede usar rangos.
+
+Prueba algunos bucles. Como otros idiomas, Kotlin tiene while bucles, do...while bucles, y ++ y -- operadores. Kotlin también tiene repeat bucles.
+
+Resumen
+Kotlin es muy similar a otros idiomas cuando se trata de lo básico como operadores, listas y bucles, pero hay algunas diferencias importantes.
+
+Las siguientes características pueden ser diferentes en Kotlin de lo que está acostumbrado en otros idiomas:
+
+Los tipos de Kotlin no se pueden convertir implícitamente — use casting.
+Variables declaradas con val solo se puede asignar una vez.
+Las variables de Kotlin no son anulables por defecto. Usar ? para hacer variables anulables.
+Con Kotlin, puede recorrer el índice y los elementos de una matriz al mismo tiempo en un for bucle.
+Las siguientes construcciones de programación de Kotlin son similares a las de otros idiomas:
+
+Las matrices y listas pueden tener un solo tipo o tipos mixtos.
+Las matrices y listas pueden estar anidadas.
+Puedes crear bucles con for, while, do/while, y repeat.
+los when declaración es la versión de Kotlin de la switch declaración, pero when es más flexible.
