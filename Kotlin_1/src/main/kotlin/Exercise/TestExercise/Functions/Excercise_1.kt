@@ -1,4 +1,4 @@
-package TestExercise.Functions
+package Exercise.TestExercise.Functions
 
 class Excercise_1 {
     fun exercise_1() {

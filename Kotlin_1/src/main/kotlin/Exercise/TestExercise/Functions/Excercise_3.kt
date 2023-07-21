@@ -1,4 +1,4 @@
-package TestExercise.Functions
+package Exercise.TestExercise.Functions
 
 class Excercise_3 {
     fun area(){
