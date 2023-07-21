@@ -1,0 +1,11 @@
+Companion Object => 
+A veces necesita una función o propiedad singleton que esté asociada con una clase y no con una instancia. En otros lenguajes como Java, puede usar un static miembro. Kotlin ofrece el companion object para este propósito. El objeto complementario no es una instancia y no está destinado a usarse solo.
+
+Los objetos complementarios son verdaderos objetos Kotlin. Pueden implementar interfaces y ampliar clases que los hacen muy ricos en funciones mientras guardan memoria con un solo tono.
+
+La diferencia básica entre los objetos complementarios y los objetos regulares es:
+
+Los objetos complementarios se inicializan a partir del constructor estático de la clase que contiene, es decir, se crean cuando se crea el objeto.
+Los objetos regulares se inicializan perezosamente en el primer acceso a ese objeto; es decir, cuando se usan por primera vez.
+Hay más, pero todo lo que necesita saber por ahora es envolver constantes en clases en un objeto complementario.
+

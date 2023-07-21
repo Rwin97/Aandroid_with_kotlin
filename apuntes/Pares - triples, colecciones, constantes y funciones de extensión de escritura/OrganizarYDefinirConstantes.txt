@@ -1,0 +1,17 @@
+En Kotlin, companion object es un bloque dentro de una clase que nos permite definir propiedades y funciones estáticas o de clase. Estas propiedades y funciones pueden ser accedidas directamente desde la clase, sin la necesidad de crear una instancia de la misma.
+
+las constantes no se pueden declarar dentro de funciones deben estar en un nivel superior
+
+Además, const val solo funciona en el nivel superior, y en clases de singleton declaradas con object, no con clases regulares. Puede usar esto para crear un archivo o un solo objeto que contenga solo constantes e importarlas según sea necesario.
+
+crea un objeto complementario
+Kotlin no tiene un concepto de constantes de nivel de clase.
+
+Para definir constantes dentro de una clase, debe envolverlas en objetos complementarios declarados con el companion palabra clave. El objeto complementario es básicamente un objeto singleton dentro de la clase.
+
+La diferencia básica entre los objetos complementarios y los objetos regulares es:
+
+Los objetos complementarios se inicializan a partir del constructor estático de la clase que contiene, es decir, se crean cuando se crea el objeto.
+Los objetos regulares se inicializan perezosamente en el primer acceso a ese objeto; es decir, cuando se usan por primera vez.
+
+

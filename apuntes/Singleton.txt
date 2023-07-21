@@ -1,0 +1,33 @@
+En esta tarea, aprende sobre algunas de las clases de propósito especial en Kotlin, incluidas las siguientes:
+
+* Clases de Singleton
+* Objetos complementarios
+* Enums
+
+para que sea un singleton. Solo puede haber una instancia de ello.
+
+Resumen => 
+Esta lección cubrió mucho terreno. Si bien gran parte de esto debería ser familiar de otros lenguajes de programación orientados a objetos, Kotlin agrega algunas características para mantener el código conciso y legible.
+
+Clases y constructores
+Definir una clase en Kotlin usando class.
+Kotlin crea automáticamente setters y getters para propiedades.
+Defina el constructor primario directamente en la definición de clase. Por ejemplo: class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
+Si un constructor primario necesita código adicional, escríbalo en uno o más init bloques.
+Una clase puede definir uno o más constructores secundarios usando constructor, pero el estilo Kotlin es usar una función de fábrica en su lugar.
+Modificadores y subclases de visibilidad.
+Todas las clases y funciones en Kotlin son public de forma predeterminada, pero puede usar modificadores para cambiar la visibilidad a internal, private, o protected.
+Para hacer una subclase, la clase principal debe estar marcada open.
+Para anular métodos y propiedades en una subclase, los métodos y propiedades deben estar marcados open en la clase de padres.
+Clases de datos, singletons, y enums
+Haga una clase de datos prefijando la declaración con data.
+Destruccion es una abreviatura para asignar las propiedades de a data objetar a variables separadas.
+Haga una clase de singleton usando object en lugar de class.
+Definir un enum usando enum class.
+Clases abstractas, interfaces, y delegación
+Las clases e interfaces abstractas son dos formas de compartir el comportamiento común entre clases.
+Un clase abstracta define propiedades y comportamiento, pero deja la implementación a subclases.
+Un interfaz define el comportamiento y puede proporcionar implementaciones predeterminadas para parte o la totalidad del comportamiento.
+Cuando usa interfaces para componer una clase, la funcionalidad de la clase se extiende a través de las instancias de clase que contiene.
+La delegación de interfaz utiliza la composición delegando la implementación a las clases de interfaz.
+Composición es una forma poderosa de agregar funcionalidad a una clase usando la delegación de interfaz. En general, se prefiere la composición, pero la herencia de una clase abstracta es mejor para algunos problemas.

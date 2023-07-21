@@ -1,0 +1,26 @@
+Funciones => 
+palabra clave para definir una funcion es fun nombreFuncion(){}
+
+
+
+ lambdaFunctions  =>  val waterFilter: (Int) -> Int = { dirty -> dirty / 2 }
+ * Hacer una variable llamada waterFilter.
+ * waterFilter puede ser cualquier función que tome un Int y devuelve un Int.
+ * Asignar una lambda para waterFilter.
+ * La lambda devuelve el valor del argumento dirty dividido por 2.
+ 
+ 
+ El poder real de las lambdas es usarlas para crear funciones de orden superior, donde el argumento de una función es otra función.
+ 
+ Una función de orden superior es una función que toma otras funciones como parámetros, o es una función que devuelve otra función. 
+ 
+Resumen
+* Para crear nuevos archivos fuente de Kotlin en IntelliJ IDEA, haga clic en "src" en el panel   Proyecto y haga clic con el botón derecho para abrir un menú. Seleccione "Nuevo archivo / clase Kotlin >".
+* Para compilar y ejecutar un programa en IntelliJ IDEA, haga clic en el triángulo verde al lado del  main() función. La salida aparece en una ventana a continuación.
+* En IntelliJ IDEA, especifique los argumentos de la línea de comandos para pasar a main() función en Ejecute > Editar configuraciones.
+* Casi todo en Kotlin tiene un valor. Puede usar este hecho para hacer que su código sea más conciso utilizando el valor de un if o when como expresión o valor de retorno.
+* Los argumentos predeterminados eliminan la necesidad de múltiples versiones de una función o método. Por ejemplo: fun swim(speed: String = "fast") { ... }
+* Las funciones compactas, o funciones de expresión única, pueden hacer que su código sea más legible. Por ejemplo: fun isTooHot(temperature: Int) = temperature > 30
+* Has aprendido algunos conceptos básicos sobre los filtros, que usan expresiones lambda. Por ejemplo: val beginsWithP = decorations.filter { it [0] == 'p' }
+* A expresión lambda es una función que no está vinculada a un identificador, es decir, es una función anónima. Las expresiones Lambda se definen entre llaves {}.
+* En un función de orden superior, pasa una función como una expresión lambda a otra función como datos. Por ejemplo: dirtyLevel = updateDirty(dirtyLevel) { dirtyLevel -> dirtyLevel + 23}

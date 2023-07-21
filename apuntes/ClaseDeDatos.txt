@@ -1,0 +1,7 @@
+Data Classes
+
+Kotlin data Las clases vienen con algunos beneficios adicionales, como utilidades para imprimir y copiar. En esta tarea, crea una clase de datos simple y aprende sobre el soporte que Kotlin proporciona para las clases de datos.
+
+Si no necesita una o más de las propiedades, puede omitirlas usando _ en lugar de un nombre de variable, como se muestra en el código a continuación.
+
+val (rock, _, diver) = d5

@@ -1,0 +1,31 @@
+Clases => 
+Terminología
+Los siguientes términos de programación ya deberían serle familiares:
+
+Clases son planos para objetos. Por ejemplo, un Aquarium clase es el plan para hacer un Aquarium objeto.
+Objetos son instancias de clases; un objeto de acuario es uno real Aquarium eso existe en la memoria.
+Propiedades son características de clases, como la longitud, el ancho y la altura de un Aquarium.
+Métodos, también llamado funciones miembro, son la funcionalidad de la clase. Los métodos son lo que puede "hacer" con el objeto. Por ejemplo, puedes fillWithWater() un Aquarium objeto.
+Un interfaz es una especificación que una clase puede implementar. Por ejemplo, la limpieza es común a objetos que no sean acuarios, y la limpieza generalmente ocurre de manera similar para diferentes objetos. Entonces podría tener una interfaz llamada Clean que define un clean() método. los Aquarium clase podría implementar el Clean interfaz para limpiar el acuario con una esponja suave.
+Paquetes son una forma de agrupar el código relacionado para mantenerlo organizado o para hacer una biblioteca de código. Una vez que se crea un paquete, puede usar import para permitirle hacer referencia directa a clases en ese paquete.
+
+
+* Los nombres de las clases por convicion empiezan con letra mayuscual 
+
+Contructors => 
+En Kotlin, define el constructor directamente en la declaración de clase en sí, especificando los parámetros entre paréntesis como si la clase fuera un método. Al igual que con las funciones en Kotlin, esos parámetros pueden incluir valores predeterminados.
+
+Modificadores de visibilidad => 
+por defecto el modificador de visibilidad de kotlin es public cunado no colocamos ninguno 
+
+* privatesignifica que solo será visible en esa clase ( o archivo fuente si está trabajando con funciones ).
+
+* protected es lo mismo que private, pero también será visible para cualquier subclase.
+
+* internal significa que solo será visible dentro de ese módulo. A módulo es un conjunto de archivos Kotlin compilados juntos, por ejemplo, una biblioteca, un cliente o aplicación, una aplicación de servidor en un proyecto IntelliJ. Tenga en cuenta que el uso del "módulo" aquí no está relacionado con los módulos Java que se introdujeron en Java 9.
+
+* publicsignifica visible fuera de la clase. Todo es público por defecto, incluidas las variables y métodos de la clase.
+
+* Variables de miembros
+Las propiedades dentro de una clase o variables miembro son public por defecto. Si los define con var, son mutables, es decir, legibles y grabables. Si los define con val, son de solo lectura después de la inicialización.
+

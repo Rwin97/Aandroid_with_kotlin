@@ -1,0 +1,4 @@
+SubClases => 
+En Kotlin, por defecto, las clases no se pueden subclasificar. Debes marcar una clase como open para permitir que sea subclasificado. En esas subclases, también debe marcar propiedades y variables miembro como open, para anularlos en la subclase. los open se requiere palabra clave para evitar fugas accidentales de detalles de implementación como parte de la definición de la clase.
+
+

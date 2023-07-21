@@ -1,0 +1,30 @@
+Collections => 
+Comprenda más sobre las listas
+Se introdujeron listas y listas mutables en una lección anterior. Son estructuras de datos muy utilizadas, por lo que Kotlin proporciona una serie de funciones integradas para ellos. Revise esta lista parcial de funciones para las listas. Puede encontrar listados completos en la documentación de Kotlin para ambos List y MutableList.
+Función					Propósito
+
+add(element: E)				Agregue un elemento a la lista mutable.
+
+remove(element: E)				Eliminar un elemento de una lista mutable.
+
+reversed()					Devuelva una copia de la lista con los elementos en orden inverso.
+
+contains(element: E)				Devolución true si la lista contiene el elemento.
+
+subList(fromIndex: Int, toIndex: Int)		Devuelva parte de la lista, desde el primer índice hasta el segundo índice, pero sin incluirlo.
+
+
+los mapas hash => 
+Los mapas hash son otra estructura de datos útil. Le permiten almacenar un valor y un objeto secundario que puede usar para hacer referencia a los valores almacenados. Por ejemplo, si desea almacenar las alturas de todos en su clase o pueblo y no necesita saber quién era quién, puede almacenar las alturas en un List. Si desea almacenar el nombre de la persona, puede almacenar el nombre de la persona como la clave y la altura como valor. En Kotlin, puede crear mapas hash que asocian ( o map ) casi cualquier cosa a cualquier otra cosa usando hashMapOf(). Los mapas hash son una lista de pares, donde el primer valor actúa como una clave de búsqueda para el segundo valor.
+
+recuperar el valor del nombre científico basado en la clave de nombre de pez común, utilizando get(), o incluso corchetes más cortos [].
+
+Si una clave no está en el mapa, intente devolver el nombre científico correspondiente null. Dependiendo de los datos del mapa, puede ser común no tener coincidencia para una posible clave. Para casos como ese, Kotlin proporciona el getOrDefault() función.
+
+Si necesita hacer más que solo devolver un valor, Kotlin proporciona el getOrElse() función.
+
+En lugar de devolver un valor predeterminado simple, cualquiera que sea el código entre los tirantes rizados {} es ejecutado. En el ejemplo, else simplemente devuelve una cadena, pero podría ser tan elegante como encontrar una página web con una descripción científica detallada y devolverla.
+
+Justo como mutableListOf, también puedes hacer un mutableMapOf. Un mapa mutable le permite colocar y eliminar elementos. Mutable solo significa capaz de cambiar, inmutable significa incapaz de cambiar.
+
+

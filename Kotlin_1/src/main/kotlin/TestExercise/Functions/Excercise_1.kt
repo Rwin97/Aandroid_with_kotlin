@@ -1,4 +1,4 @@
-package Day_1
+package TestExercise.Functions
 
 class Excercise_1 {
     fun exercise_1() {

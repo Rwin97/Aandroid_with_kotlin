@@ -1,0 +1,10 @@
+Resumen => 
+En esta lección, aprendió más sobre colecciones, aprendió sobre constantes y probó el poder de las funciones y propiedades de extensión.
+
+Crear un companion object eso está asociado con la clase y no con las instancias.
+Los pares y triples se pueden usar para devolver más de un valor de una función. Por ejemplo: val twoLists = fish.partition { isFreshWater(it) }
+Kotlin tiene muchas funciones útiles para List, como reversed(), contains(), y subList().
+A HashMap se puede usar para asignar claves a valores. Por ejemplo: val scientific = hashMapOf("guppy" to "poecilia reticulata", "catfish" to "corydoras", "zebra fish" to "danio rerio" )
+Declare las constantes de tiempo de compilación usando el const palabra clave. Puede colocarlos en el nivel superior, organizarlos en un solo objeto o colocarlos en un objeto complementario.
+Las funciones y propiedades de extensión pueden agregar funcionalidad a una clase. Por ejemplo: fun String.hasSpaces() = indexOf(" ") != -1
+Un receptor anulable le permite crear extensiones en una clase que puede ser null. los ?. el operador puede ser emparejado con apply para verificar null antes de ejecutar código. Por ejemplo: this?.apply { println("removing $this") }

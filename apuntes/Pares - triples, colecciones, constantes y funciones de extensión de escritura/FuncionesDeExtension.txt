@@ -1,0 +1,12 @@
+funciones de extensión => 
+
+En esta tarea, aprende a extender el comportamiento de las clases. Es muy común escribir funciones de utilidad para extender el comportamiento de una clase. Kotlin proporciona una sintaxis conveniente para declarar estas funciones de utilidad y las llama funciones de extensión.
+
+Las funciones de extensión le permiten agregar funciones a una clase existente sin tener que acceder a su código fuente. Por ejemplo, podría declararlos en un Extensions.kt archivo que forma parte de su paquete. En realidad, esto no modifica la clase, pero le permite usar la notación de puntos al llamar a la función en objetos de esa clase.
+
+escribe una función de extensión
+String es un tipo de datos valioso en Kotlin con muchas funciones útiles. Pero, ¿y si necesitáramos algo adicional String funcionalidad que no estaba directamente disponible? Por ejemplo, podríamos querer determinar si un String tiene espacios incrustados.
+
+Las funciones de extensión se resuelven estáticamente, en tiempo de compilación, según el tipo de variable.
+
+

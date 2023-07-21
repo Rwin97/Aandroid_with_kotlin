@@ -1,0 +1,7 @@
+Pares y triples => 
+Los pares y triples son clases de datos premade para 2 o 3 elementos genéricos. Esto puede, por ejemplo, ser útil para que una función devuelva más de un valor.
+
+Supongamos que tuvieras un List de peces y una función isFreshWater() para verificar si el pez era un pez de agua dulce o salada. Usemos List.partition() que devuelve dos listas según una condición. Una lista tendrá los elementos donde está la condición true, y la otra lista tendrá los elementos donde está la condición false.
+
+Destruye algunos pares y triples => 
+Separar pares y triples en sus partes se llama desestructuración. Asigne el par o el triple al número apropiado de variables, y Kotlin asignará el valor de cada parte en orden.

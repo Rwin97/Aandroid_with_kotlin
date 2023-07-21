@@ -1,0 +1,18 @@
+clases abstractas e interfaces => 
+* Ni una clase abstracta ni una interfaz pueden ser instanciadas, las clases abstractas pueden tener constructores.
+* Como no son clases, las interfaces no pueden tener ninguna lógica de constructor
+* Las interfaces no pueden almacenar ningún estado.
+
+* Para anular una propiedad, use el override palabra clave en la subclase.
+
+Cuándo usar clases abstractas versus interfaces
+Los ejemplos anteriores son simples, pero cuando tiene muchas clases interrelacionadas, las clases abstractas y las interfaces pueden ayudarlo a mantener su diseño más limpio, más organizado y más fácil de mantener.
+
+Como se señaló anteriormente, las clases abstractas pueden tener constructores e interfaces no, pero por lo demás son muy similares. Entonces, ¿cuándo deberías usar cada uno?
+
+Cuando utiliza interfaces para diseñar una clase, la funcionalidad de la clase se amplía mediante los métodos en las interfaces que implementa. El uso de los rasgos definidos en las interfaces tenderá a hacer que el código sea más fácil de reutilizar y comprender que la herencia de una clase abstracta. Además, puede implementar múltiples interfaces en una clase, pero solo puede subclasificar desde una clase. La regla general es favorecer la composición ( ie, interfaces y referencias de instancia ) sobre la subclasificación cuando sea posible.
+
+Use una clase abstracta cada vez que no pueda completar una clase. Por ejemplo, volviendo a la AquariumFish clase, puedes hacer todo AquariumFish implementar FishAction, y proporcionar una implementación predeterminada para eat mientras se va color abstracto, porque no hay realmente un color predeterminado para el pescado.
+
+las clases abstractas proporcionan una base común con la posibilidad de tener métodos concretos y propiedades con implementación.
+
