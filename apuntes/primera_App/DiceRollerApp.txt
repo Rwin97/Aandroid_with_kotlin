@@ -1,0 +1,102 @@
+Los elementos TextView y Button estarán en el mismo ConstraintLayout, que es un tipo de ViewGroup.
+
+Cuando hay Views en un ViewGroup, a los elementos Views se los considera secundarios del superior ViewGroup. En el caso de tu app, los elementos TextView y Button se considerarían elementos secundarios del ConstraintLayout superior.
+
+
+resulta muy útil ver texto en TextView mientras editas el diseño y el código de tu app. Con este propósito, puedes agregar texto a TextView que solo está visible en la vista previa de diseño, pero no cuando se ejecuta la app.
+
+Selecciona TextView en Component Tree.
+En Common Attributes, busca el atributo text y, debajo de este, otro text con un ícono de herramienta. El atributo text es lo que se mostrará al usuario cuando se ejecute la app. El atributo text con el ícono de herramienta es el atributo "tools text" que solo tú como desarrollador puedes ver.
+Configura el texto de este atributo como "1" en TextView (para simular que el resultado del lanzamiento fue 1). Este número "1" solo aparecerá en el Design Editor de Android Studio, pero no lo hará cuando ejecutes la app en un dispositivo o emulador real.
+
+Introducción a las actividades -> 
+Un elemento Activity proporciona la ventana en la que tu app dibuja su IU. Por lo general, un elemento Activity ocupa toda la pantalla de tu app en ejecución. Cada app tiene una o más actividades. A menudo, la primera actividad o aquella de nivel superior se denomina MainActivity, y la plantilla del proyecto la proporciona. Por ejemplo, cuando el usuario se desplace por la lista de apps de su dispositivo y presione el ícono de la app de "Dice Roller", el sistema Android iniciará el elemento MainActivity de la app.
+
+-> clase principal main 
+En el código de MainActivity, debes proporcionar detalles sobre el diseño de Activity y la forma en que el usuario debe interactuar con ella.
+
+En la app de tarjeta de cumpleaños, hay un elemento Activity que muestra la imagen y el mensaje del cumpleaños.
+En la app de Dice Roller, hay un elemento Activity que muestra el diseño de TextView y de Button que acabas de compilar.
+En el caso de las apps más complicadas, es posible que haya varias pantallas y más de un elemento Activity. Cada Activity tiene un propósito específico.
+
+Por ejemplo, en una app de galería de fotos, puedes tener un Activity para mostrar una cuadrícula de fotos, otro Activity para ver una foto individual y un tercer Activity para editar una foto individual.
+
+Navega al archivo MainActivity.kt y ábrelo (app > java > com.example.diceroller > MainActivity.kt). A continuación, se muestra lo que deberías ver. Si ves import..., haz clic en ... para expandir las importaciones.
+
+package com.example.diceroller
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContentView(R.layout.activity_main)
+   }
+}
+No necesitas entender cada palabra del código de arriba, pero sí debes tener una idea general de lo que hace. Cuanto más trabajes con el código de Android, más familiar te resultará y más lo comprenderás.
+
+Observa el código Kotlin de la clase MainActivity, identificado por la palabra clave class y, luego, el nombre.
+
+class MainActivity : AppCompatActivity() {
+    ...
+}
+Observa que no hay una función main() en tu MainActivity.
+Anteriormente, aprendiste que cada programa de Kotlin debe tener una función main(). Las apps para Android funcionan de manera diferente. En lugar de llamar a una función main(), el sistema Android llamará al método onCreate() de tu MainActivity cuando la app se abra por primera vez.
+
+Busca el método onCreate(), que es similar al siguiente código:
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContentView(R.layout.activity_main)
+   }
+Aprenderás sobre override en un codelab próximo (de momento, no te preocupes por ello). El resto del método onCreate() configura el elemento MainActivity mediante el código de las importaciones y la configuración del diseño inicial con setContentView().
+
+Observa las líneas que comienzan con import.
+Android proporciona un framework con varias clases a fin de facilitar la escritura de apps para Android, pero necesita conocer específicamente la clase que deseas. Puedes determinar la clase del framework que se usará en tu código mediante una sentencia import. Por ejemplo, la clase Button se define en android.widget.Button.
+
+
+Cómo habilitar las importaciones automáticas -> 
+
+Que debas recordar agregar sentencias import cuando usas más clases puede resultar engorroso. Afortunadamente, Android Studio te ayuda a elegir las importaciones adecuadas cuando usas clases proporcionadas por terceros. En este paso, configurarás Android Studio para que agregue automáticamente importaciones cuando sea posible y quite de tu código aquellas que no uses.
+
+En macOS, abre la configuración en File > New Project Settings > Preferences for New Projects... Expande Other Settings > Auto Import. En las secciones Java y Kotlin, asegúrate de que las opciones Add unambiguous imports on the fly y Optimize imports on the fly (for current project) estén marcadas. Ten en cuenta que hay dos casillas de verificación en cada sección. Para guardar los cambios y cerrar la configuración, presiona OK.
+
+
+setOnClickListener {…}. 
+Dentro de las llaves, agrega las instrucciones de lo que debe suceder cuando se presiona el botón. Por ahora, tu app mostrará un Toast, que es un breve mensaje que se muestra al usuario.
+
+Luego, llama al método show() de modo que le indiques a Toast que debe mostrarse.
+
+
+// codigo usado en el codelab -> 
+/**
+             * Code to see a toast
+             * */
+//            val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
+//            toast.show()
+//            other form
+//            Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
+
+Formatear el código -> 
+Ahora, volverás a formatear tu código a fin de asegurarte de que cumpla con las convenciones de formato de código recomendadas para Android.
+
+En la clase MainActivity.kt, selecciona todo el texto del archivo con la combinación de teclas Control+A en Windows (o Command+A en Mac). También puedes ir al menú de Android Studio Edit > Select All.
+Una vez que tengas todo el texto seleccionado en el archivo, ve al menú de Android Studio Code > Reformat Code o usa la combinación de teclas Ctrl+Alt+L (o Command+Option+L en Mac).
+Eso actualiza el formato de tu código, incluidos los espacios en blanco y las sangrías, entre otros. Es posible que no veas ningún cambio, y eso es bueno. Significa que tu código ya tenía un formato correcto.
+
+Comenta el código
+Agrega algunos comentarios al código para describir lo que sucederá en virtud del código que escribiste. A medida que el código se vuelve más complicado, también es importante que tomes nota del motivo por el que lo escribiste para que funcione de la manera que indicaste. Si más tarde cambias el código, lo que hace el código seguirá siendo claro, pero es posible que no recuerdes por qué lo escribiste como lo hiciste.
+
+Es común agregar un comentario para cada clase (MainActivity y Dice son las únicas que tienes en tu app) y cada método que escribes. Usa los símbolos /** y */ al principio y al final del comentario para indicarle al sistema que este no es código. Cuando el sistema ejecute el código, se omitirán estas líneas.
+
+Resumen -> 
+Agrega un Button en una app para Android mediante el editor de diseño.
+Modifica la clase MainActivity.kt para agregar comportamiento interactivo a la app.
+Muestra un mensaje Toast emergente como una solución temporal a los efectos de verificar que estés en el camino correcto.
+Configura un objeto de escucha de clic para un elemento Button mediante setOnClickListener() a fin de agregar el comportamiento que debe tener cuando se haga clic en un elemento Button.
+Cuando la app se está ejecutando, puedes actualizar la pantalla llamando a los métodos en TextView, el Button u otros elementos de la IU del diseño.
+Comenta tu código de modo que ayudes a que las personas que lo lean puedan entender tu enfoque.
+Cambia el formato del código y limpia tu código.
+
